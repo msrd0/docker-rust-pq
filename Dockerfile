@@ -5,8 +5,10 @@ ENV CARGO_HOME=/usr/local/cargo
 RUN apk add --no-cache \
 		cargo \
 		gcc \
-		libpq \
 		musl-dev \
+		postgresql-dev \
 		rust \
 	&& mkdir -p $CARGO_HOME \
 	&& chmod a+w $CARGO_HOME
+
+ENV PATH="$CARGO_HOME:$PATH"
