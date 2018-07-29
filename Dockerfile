@@ -11,4 +11,4 @@ RUN apk add --no-cache \
 	&& mkdir -p $CARGO_HOME \
 	&& chmod a+w $CARGO_HOME
 
-ENV PATH="$CARGO_HOME:$PATH"
+ENV PATH="$CARGO_HOME/bin:$PATH"
